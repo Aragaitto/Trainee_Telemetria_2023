@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleRaceHistory = void 0;
-const firebase_1 = require("../utils/firebase");
+//import { saveFileToStorage } from "../utils/firebase";
 const dataProcessing_1 = require("../utils/dataProcessing");
 function handleRaceHistory(socket, io, dataHistory, record, speed) {
     setTimeout(() => {
@@ -21,7 +21,7 @@ function handleRaceHistory(socket, io, dataHistory, record, speed) {
         }
         else {
             record.pop();
-            (0, firebase_1.saveFileToStorage)(dataHistory);
+            //saveFileToStorage(dataHistory);
         }
         console.log(record.length > 0);
         io.emit("recordStatus", record.length > 0);

@@ -6,7 +6,7 @@ export function handleBoat(socket: Socket, io: any, speed: string[], coordenadas
     // console.log(data);
     let newData = convertData(coordenadas,coord);
     //newData.velocidadeBarco = speed[0];
-    console.log(newData)
+    //console.log(newData)
     io.emit("info", newData);
 
 
